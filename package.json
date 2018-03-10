@@ -1,0 +1,24 @@
+{
+  "name": "webtask",
+  "version": "1.0.0",
+  "description": "react.js app with mongo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbece5/Webtask.git"
+  },
+  "author": "Kevin Becerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinbece5/Webtask/issues"
+  },
+  "homepage": "https://github.com/kevinbece5/Webtask#readme",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.9"
+  }
+}
