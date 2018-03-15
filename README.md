@@ -1,7 +1,7 @@
 # Webtask
 React.js app with Mongo
 
-# Installatin 
+# Installation
 1. After downloading or cloning the project files open up 2 terminal tabs
 2. In the first termimal tab make sure you have mongo running if not run the mongo deamon command
 3. Enter the folder from the terminal and enter the mongo shell.
