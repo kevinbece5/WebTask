@@ -4,8 +4,11 @@
   "description": "react.js app with mongo",
   "main": "app.js",
   "scripts": {
+    "webtask-install": "cd webtask && npm install",
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "webtask": "npm start --prefix webtask",
+    "dev": "concurrently \"npm run server\" \"npm run webtask\""
   },
   "repository": {
     "type": "git",
@@ -18,8 +21,10 @@
   },
   "homepage": "https://github.com/kevinbece5/Webtask#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "concurrently": "^3.5.1",
     "express": "^4.16.2",
-    "mongoose": "^5.0.9"
+    "mongoose": "^5.0.9",
+    "react-fontawesome": "^1.6.1"
   }
 }

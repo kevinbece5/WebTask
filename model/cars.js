@@ -2,53 +2,53 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const carSchema = new Schema({
-    model:{
-        type: string,
+    model: {
+        type: String,
         trim: true,
         isRequired: true,
     },
     year:{
-        type: number,
+        type: Number,
         trim: true,
         isRequired: true,
     },
     price:{
-        type: number,
+        type: String,
         trim: true,
         isRequired: true,
     },
     mileage:{
-        type: number,
+        type: String,
         trim: true,
         isRequired: true,
     },
     itemNumber:{
-        type: number,
+        type: Number,
         trim: true, 
         isRequired: true,
     },
     vinNumber:{
-        type: number,
+        type: String,
         trim: true,
         isRequired: true,
     },
     cylinders:{
-        type: string,
+        type: Number,
         trim: true,
         isRequired: true,
     },
     cityMPG:{
-        type: number,
+        type: Number,
         trim: true,
         isRequired: true,
     },
     highwayMPG:{
-        type: number,
+        type: Number,
         trim: true,
         isRequired: true,
     },
     engine:{
-        type: string,
+        type: String,
         trim:true,
         isRequired: true,
     },
@@ -57,3 +57,6 @@ const carSchema = new Schema({
 
 const car = mongoose.model('car', carSchema);
 module.exports = car;
+module.exports.getCars = (callback, limit)=>{
+    car.find(callback).limit(limit);
+}
