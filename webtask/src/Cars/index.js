@@ -15,11 +15,12 @@ class Cars extends Component{
 
         this.changeImg = this.changeImg.bind(this);
     }
-
+    //Changes the largest image shown to the one the user clicks on
     changeImg(e){
             document.querySelector("#current").src = e.target.src;
     }
 
+    //makes a call to the api to get the data
     componentWillMount(){
         fetch('/api/cars')
             .then(res => res.json())
@@ -29,6 +30,7 @@ class Cars extends Component{
     render(){
         return(
             <div>
+            {/*Carousel*/}
             <div className='row infoBackground'>
             <div className="carousel slide mobileCarousel w-100" data-ride="carousel" data-interval="1500">
             <ol class="carousel-indicators">
@@ -62,7 +64,7 @@ class Cars extends Component{
             </div>
 
 
-
+            {/* Car image gallery and Basic information on the car   */}
             <img src={image1} alt='car angle' className='img-fluid col imgCard' id='current' />
             <div className='w-100 break'></div>
             {this.state.cars.map(car =>
@@ -71,7 +73,7 @@ class Cars extends Component{
                   <p className="card-text info">Year</p>
                   <h6 className="card-subtitle mb-2 text-muted">{car.year}</h6>
                   <p className="card-text info">Price</p>
-                  <p className="card-text">${car.price}</p>
+                  <p className="card-text">{car.price}</p>
                   <p className="card-text info">Mileage</p>
                   <p className="card-text">{car.mileage} miles</p>
                   <p className="card-text info">Item Number: {car.itemNumber}</p>

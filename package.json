@@ -25,6 +25,7 @@
     "concurrently": "^3.5.1",
     "express": "^4.16.2",
     "mongoose": "^5.0.9",
+    "nodemon": "^1.17.2",
     "react-fontawesome": "^1.6.1"
   }
 }

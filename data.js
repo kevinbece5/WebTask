@@ -1,11 +1,11 @@
-//Creates the database
-const db = db.getSiblingDB('webtask');
+// shell
+var db = db.getSiblingDB('webtask');
 
 // delete any data that was there already
 db.dropDatabase();
 
-//the data thats going to be inserted
-const car = {
+// create fake names for our users
+    car = {
     model: "Volkswagen Passat",
     year: 2014,
     price: "$11,700 - $13,000",
@@ -17,6 +17,6 @@ const car = {
     highwayMPG: 34,
     engine: "4-Cylinder Turbo",
 }
-
-//insers the data into the collection
+// insert the users into the database
+// in the `users` collection
 db.cars.insert(car);

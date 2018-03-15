@@ -8,7 +8,8 @@ class Specs extends Component{
             cars:[]
         }
     }
-
+    
+    //makes a call to the api to get the data
     componentWillMount(){
         fetch('/api/cars')
             .then(res => res.json())
@@ -18,9 +19,11 @@ class Specs extends Component{
     render(){
         return(
             <div>
+                {/* Call button will only be shown for smaller screens  */}
                 <div className="alert text-center callUsBtn" role="alert">
                     <a href="tel:773-123-4567" className="text-white">CALL US</a>
                 </div>
+                {/* Specs and details about the car being called from the database */}
                 {this.state.cars.map(car =>
                 <div className='row specs'>
                     <div className="card col specsCard">
@@ -50,6 +53,7 @@ class Specs extends Component{
                     </div>
                 </div>
                 )}
+                {/* Footer */}
                 <div className="pt-3 mx-auto footer justify-content-center">
                         <ul className="nav">
                             <li className="nav-item pr-1">About /</li>

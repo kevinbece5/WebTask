@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class NavBar extends Component {
 		render(){
 			return(
+			// Navbar
 		<nav className="nav navbar-expand-sm navbar-light bg-dark justify-content-end">
 			<div className="collapse nav-bar d-flex fontABackground" id="navbarNavDropdown">
 					<li className="nav-item mobile"><a><i className="fas fa-search fontA"></i></a></li>
