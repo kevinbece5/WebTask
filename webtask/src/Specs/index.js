@@ -25,7 +25,7 @@ class Specs extends Component{
                 </div>
                 {/* Specs and details about the car being called from the database */}
                 {this.state.cars.map(car =>
-                <div className='row specs'>
+                <div key={car._id}className='row specs'>
                     <div className="card col specsCard">
                         <div className="card-body">
                         <h5 className="card-title titleSpecs">Exterior</h5>

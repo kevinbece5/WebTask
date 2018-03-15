@@ -33,8 +33,8 @@ class Cars extends Component{
             {/*Carousel*/}
             <div className='row infoBackground'>
             <div className="carousel slide mobileCarousel w-100" data-ride="carousel" data-interval="1500">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <ol className="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
@@ -68,7 +68,7 @@ class Cars extends Component{
             <img src={image1} alt='car angle' className='img-fluid col imgCard' id='current' />
             <div className='w-100 break'></div>
             {this.state.cars.map(car =>
-                <div className="card col infoCard pb-4">
+                <div key={car._id}className="card col infoCard pb-4">
                   <h5 className="card-title model">{car.model}</h5>
                   <p className="card-text info">Year</p>
                   <h6 className="card-subtitle mb-2 text-muted">{car.year}</h6>
