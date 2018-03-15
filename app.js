@@ -8,10 +8,9 @@ mongoose.connect('mongodb://localhost/webtask', (error) => {
       console.error('Please make sure Mongodb is installed and running!'); // eslint-disable-line no-console
       throw error;
     }
-  
+
   });
 const db = mongoose.connection;
-
 
 const app = express();
 

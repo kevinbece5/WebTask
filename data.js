@@ -1,13 +1,10 @@
-//creats the database
+//Creates the database
 const db = db.getSiblingDB('webtask');
 
 // delete any data that was there already
 db.dropDatabase();
 
-//creates the collection
-db.createCollections('cars');
-
-//car data
+//the data thats going to be inserted
 const car = {
     model: "Volkswagen Passat",
     year: 2014,
@@ -21,7 +18,5 @@ const car = {
     engine: "4-Cylinder Turbo",
 }
 
-// inserts the car into the database
+//insers the data into the collection
 db.cars.insert(car);
-
-
