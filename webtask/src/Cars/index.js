@@ -71,7 +71,7 @@ class Cars extends Component{
                   <p className="card-text info">Year</p>
                   <h6 className="card-subtitle mb-2 text-muted">{car.year}</h6>
                   <p className="card-text info">Price</p>
-                  <p className="card-text">${car.price}</p>
+                  <p className="card-text">{car.price}</p>
                   <p className="card-text info">Mileage</p>
                   <p className="card-text">{car.mileage} miles</p>
                   <p className="card-text info">Item Number: {car.itemNumber}</p>
