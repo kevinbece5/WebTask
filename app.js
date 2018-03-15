@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const Car = require('./model/cars');
-// const data = require('./data');
 
 mongoose.connect('mongodb://localhost/webtask', (error) => {
     if (error) {
@@ -10,8 +9,6 @@ mongoose.connect('mongodb://localhost/webtask', (error) => {
       throw error;
     }
   
-    // feed some dummy data in DB.
-    // data();
   });
 const db = mongoose.connection;
 
